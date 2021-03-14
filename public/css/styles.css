@@ -564,7 +564,18 @@ header span {
 header .logo {
   margin-right: auto;
   margin-left: 20px;
-  display: inline-block;
+  display: flex;
+  align-content: center;
+}
+header .logo svg, header .logo h1 {
+  margin: 20px 0;
+}
+header .logo svg {
+  height: 35px;
+  margin-right: 5px;
+}
+header .logo svg path {
+  fill: #FFF;
 }
 header .user, header .name {
   display: inline-block;

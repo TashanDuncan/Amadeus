@@ -17,7 +17,7 @@ const notificationCircle = document.getElementById('circle');
 // create the html for the banner
 alertBanner.innerHTML =`
 <div class="alert-banner">
-<p><strong>Alert:</strong> You have <strong>3</strong> overdue tasks
+<p><strong>Alert:</strong> You have <strong>3</strong> overdue tickets
 to complete</p>
 <p class="alert-banner-close">x</p>
 </div>
@@ -40,7 +40,7 @@ notificationBell.addEventListener('click', e => {
 
 alertBanner.addEventListener('click', e => {
     const element = e.target;
-    
+
     if (element.classList.contains("alert-banner-close")) {
     alertBanner.style.display = "none";
     }
@@ -80,7 +80,7 @@ frequency[i].addEventListener("click", (e) => {
         } else if(frequency[i] !== element){
             frequency[i].classList.remove('active');
         }
-    }   
+    }
 });
 }
 

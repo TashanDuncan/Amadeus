@@ -21,7 +21,22 @@ header {
     .logo{
         margin-right: auto;
         margin-left: 20px;
-        display: inline-block;
+        display: flex;
+        align-content: center;
+
+        svg, h1 {
+            margin: 20px 0;
+        }
+
+        svg{
+            height: 35px;
+            margin-right: 5px;
+            path{
+                fill: $white;
+            }
+        }
+
+
     }
 
     .user, .name{
@@ -31,7 +46,7 @@ header {
         align-items: center;
         justify-content: space-between;
     }
-    
+
     .notification-bell svg{
         height: 30px;
         padding-right: 20px;
@@ -86,12 +101,12 @@ header {
     color: $white;
     margin: 10px;
     border-radius: 5px;
-    
+
 
     p{
         margin: 0;
     }
-    
+
     &-banner{
         display: flex;
         justify-content: space-between;
@@ -118,9 +133,9 @@ header {
         :last-child{
             border-bottom: none;
         }
-    
+
         &-close{
-           
+
             span{
             padding: 5px 20px;
             color: $white;
@@ -129,7 +144,7 @@ header {
             font-weight: bolder;
             cursor: pointer;
             }
-            
+
         }
 
         &-color{
@@ -145,7 +160,7 @@ header {
             justify-content: space-between;
             padding: 20px 10px;
             cursor: pointer;
-            
+
 
             div{
                 flex-grow: 1;
@@ -157,7 +172,7 @@ header {
 
 
 
- 
+
     }
 
 }
