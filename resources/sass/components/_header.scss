@@ -1,0 +1,163 @@
+ /* ============================================= */
+ /* Header Styles */
+ /* ============================================= */
+
+header {
+
+    //colors
+    color: $white;
+    background-color: $primary-color;
+
+    //font
+    font-weight: normal;
+    span{
+        font-weight: bold;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        margin-right: auto;
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    .user, .name{
+        display: inline-block;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .notification-bell svg{
+        height: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        fill: $white;
+        cursor: pointer;
+        transition: fill .5s ease-in;
+
+
+        circle{
+            fill: $green;
+        }
+    }
+
+    .ring:hover{
+        animation:ring 5s ease-in-out infinite;
+    }
+
+    .name{
+        padding-left: 20px;
+        border-left: 1px solid black;
+        height: 50px;
+
+        &-header{
+            display: none;
+        }
+    }
+     .notification-bell, img, h3{
+        display: inline-block;
+    }
+
+    a{
+        color: inherit;
+    }
+}
+
+.main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .headline{
+        margin-top: 0;
+    }
+}
+
+.alert {
+    background-color: $primary-color;
+    color: $white;
+    margin: 10px;
+    border-radius: 5px;
+    
+
+    p{
+        margin: 0;
+    }
+    
+    &-banner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+
+        &-close{
+            font-size: larger;
+            font-weight: bolder;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &-notifications{
+        position: absolute;
+        background-color: $white;
+        color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 50px;
+
+        :last-child{
+            border-bottom: none;
+        }
+    
+        &-close{
+           
+            span{
+            padding: 5px 20px;
+            color: $white;
+            background-color: red;
+            margin-left: auto;
+            font-weight: bolder;
+            cursor: pointer;
+            }
+            
+        }
+
+        &-color{
+            border-bottom: 1px $default-color solid;
+            :hover{
+                background-color: $secondary-color;
+            }
+
+        }
+
+        &-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10px;
+            cursor: pointer;
+            
+
+            div{
+                flex-grow: 1;
+                margin-left: 5px;
+            }
+
+
+        }
+
+
+
+ 
+    }
+
+}

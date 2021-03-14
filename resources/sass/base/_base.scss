@@ -1,0 +1,29 @@
+
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-weight: normal;
+    list-style-type: none;
+  }
+  
+
+section{
+  padding: 0 10px;
+}
+
+.show {display:block;}
+
+.active{
+  background-color: $green;
+  color: $white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+h3{
+  text-align: center;
+}

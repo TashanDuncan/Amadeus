@@ -1,0 +1,39 @@
+//Center
+@mixin center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin button {
+    background-color: $primary-color;
+    color: $white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@keyframes ring { 
+    0% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } 
+    10% { -webkit-transform: rotate(20deg); transform:rotate(20deg); }
+    20% { -webkit-transform: rotate(-20deg); transform:rotate(-20deg); } 
+    30% { -webkit-transform: rotate(20deg); transform:rotate(20deg); }
+    40% { -webkit-transform: rotate(-20deg); transform:rotate(-20deg); }
+    50% { -webkit-transform: rotate(20deg); transform:rotate(20deg); }
+    60% { -webkit-transform: rotate(-20deg); transform:rotate(-20deg); }
+    70% { -webkit-transform: rotate(20deg); transform:rotate(20deg); }
+    80% { -webkit-transform: rotate(-20deg); transform:rotate(-20deg); }
+    90% { -webkit-transform: rotate(20deg); transform:rotate(20deg); }
+    100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); }
+
+}
+
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}

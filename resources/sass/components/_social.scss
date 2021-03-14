@@ -1,0 +1,58 @@
+/* ============================================= */
+/*              Social styles                    */
+/* ============================================= */
+
+.social{
+
+    border-bottom: 1px $default-color solid;
+    padding-bottom: 50px;
+    &-content{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &-container{
+        display: flex;
+        background-color: $secondary-color;
+        padding: 20px 100px 0px 20px;
+        margin: 10px;
+        border: 1px $default-color solid;
+        min-width: 20%;
+        
+    }
+
+    &-image{
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: $primary-color;
+
+        svg{
+            display: block;
+            margin:  0 auto;
+            height: 70px;
+        }
+    }
+
+    &-text{
+        margin-left: 20px;
+        
+    }
+
+    &-name{
+        color: $primary-color;
+        font-weight: bold;
+        font-size: larger;
+        margin-bottom: 0px;
+    }
+
+    &-number{
+        margin-top: 2px;
+        font-size: 2rem;
+        font-weight: lighter;
+        color: $default-color;
+    }
+}

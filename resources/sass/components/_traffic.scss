@@ -1,0 +1,23 @@
+ /* ============================================= */
+ /* Traffic / Graph Styles */
+ /* ============================================= */
+
+ .traffic-header{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0px;
+    text-align: center;
+    .traffic-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li{
+            margin-right: 20px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+ }
+
+
