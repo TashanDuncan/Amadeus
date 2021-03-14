@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Mail;
+
 class ContactController extends Controller
 {
     public function store()
@@ -13,10 +15,13 @@ class ContactController extends Controller
                 'message' => 'required'
                 ]);
 
-            $email = request('email');
-            $message = request('message');
+            Mail::raw(request('message'), function ($email){
+                $email->to(request('email'))
+                    ->subject('Email from Amadeus App');
+            });
 
-            dd($email, $message);
+            return redirect('/')
+                ->with('message', 'Email Sent!');
 
     }
 }

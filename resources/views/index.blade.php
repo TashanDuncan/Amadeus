@@ -93,8 +93,12 @@
                 <input type="search" placeholder="Search..." />
             </div>
         </div>
+
+
         <!-- alert banner -->
-        <div class="alert" id="alert"><!-- JS will insert alert here --></div>
+        <div class="alert" id="alert"><!-- JS will insert alert here -->
+
+        </div>
 
 
 
@@ -302,6 +306,11 @@
                     </div>
                 @endif
             </form>
+            @if (session('message'))
+                <div>
+                    {{session('message')}}
+                </div>
+            @endif
         </section>
 
         <!-- local settings widget -->
