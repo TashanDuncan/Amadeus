@@ -53,7 +53,6 @@ closeNotifications.addEventListener('click', e => {
 });
 
 send.addEventListener('click', (e) => {
-    e.preventDefault();
 
     // ensure user and message fields are filled out
     if (user.value === "" && message.value === "") {

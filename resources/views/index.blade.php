@@ -280,19 +280,27 @@
 
         <!-- messaging widget -->
         <section class="message">
-            <h3>Message User</h3>
+            <h3>Email User</h3>
 
-            <form class="widget-container">
-                <input type="text" placeholder="Search for user" class="form-field" id="userField" list="users">
-                <datalist id="users">
-                    <option value="Dale Byrd">
-                    <option value="Dan Oliver">
-                    <option value="Dawn Wood">
-                    <option value="Tashan Duncan">
-                    <option value="Victoria Chambers">
-                </datalist>
-                <textarea placeholder="Message for user" class="form-area" id= "messageField"></textarea>
-                <button class="button-primary" id="send">Send</button>
+            <form
+                class="widget-container"
+                method="post"
+                action="/contact"
+            >
+                @csrf
+
+                <input type="email" class="form-field" id="email" name="email">
+                <textarea placeholder="Message for user" class="form-area" id= "message" name="message"></textarea>
+                <button  type="submit" class="button-primary" id="send">Send</button>
+                @if ($errors->any())
+                    <div class="alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
         </section>
 
